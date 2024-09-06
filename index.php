@@ -11,21 +11,17 @@ class Box {
 }
 
 class MetalBox extends Box {
+    use HasMaterial;
     public $weightPerUnit = 10;
     public function weight(){
         return $this->volume() * $this->weightPerUnit;
     }
 }
 
-$num1 = 1;
-$num2 = $num1;
-$num2 = 2;
-var_dump($num1, $num2);
+trait HasMaterial {
+    public $material;
+    public function getMaterial() {
+        return $this->material;
+    }
+}
 
-
-
-$metal1 = new MetalBox();
-$metal1->height = 1;
-$metal2 = clone $metal1;
-$metal2->height = 2;
-var_dump($metal1, $metal2);
