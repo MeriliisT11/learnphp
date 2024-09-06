@@ -1,39 +1,36 @@
 <?php
 
-class ConsoleLogger implements Logger {
-    public function log($message){
-        echo "$message\n";
-    }
-}
+class Box {
+    public $height;
+    protected $width;
+    private $length;
 
-class Task {
-    public function work(Logger $logger){
-        for($i=0;$i<10;$i++){
-            $logger->log($i);
+    public function volume(){
+        return $this->height * $this->width * $this->length;
+    } 
+    public function getLength(){
+        return $this->length;
+    }
+    public function setLength($length){
+        if(is_numeric($length) && $length > 0){
+            $this->length = $length;
+        } else {
+            $this->length = 0;
         }
     }
 }
 
-interface Logger {
-    public function log($message);
-}
-
-//--------------
-
-class NothingLogger implements Logger {
-    public function log2($message){
-       
+class MetalBox extends Box {
+    public $weightPerUnit = 10;
+    public function weight(){
+        return $this->volume() * $this->weightPerUnit;
+    }
+    public function testProtected(){
+        var_dump($this->width);
     }
 }
 
-class FileLogger implements Logger {
-    public function log($message){
-       $file = fopen('log.txt', 'a');
-       fwrite($file, "$message\n");
-       fclose($file);
-    }
-}
-
-$logger = new ConsoleLogger();
-$task = new Task();
-$task->work('asdasda');
+$box = new MetalBox();
+$box->setLength(121);
+$box->testProtected();
+var_dump($box);
