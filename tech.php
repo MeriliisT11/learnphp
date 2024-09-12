@@ -1,12 +1,11 @@
 <?php 
 $posts = [
-    ['title' => 'Some title 1', 'body' => 'Some body 1'],
-    ['title' => 'Some title 2', 'body' => 'Some body 2'],
-    ['title' => 'Some title 3', 'body' => 'Some body 3'],
-    ['title' => 'Some title 4', 'body' => 'Some body 4'],
+    ['title' => 'Some Tech title 1', 'body' => 'Some Tech body 1'],
+    ['title' => 'Some Tech title 2', 'body' => 'Some Tech body 2'],
+    ['title' => 'Some Tech title 3', 'body' => 'Some Tech body 3'],
+    ['title' => 'Some Tech title 4', 'body' => 'Some Tech body 4'],
 ];
 ?>
-
 <?php include 'partials/header.php'; ?>
 
 <main class="container">
