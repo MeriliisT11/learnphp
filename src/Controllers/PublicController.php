@@ -32,4 +32,23 @@ class PublicController {
         ];
         include 'views/tech.php';
     }
+
+    public function form() {
+        //dump($_GET, $_POST); //query
+
+        // if(isset($_GET['fname'])){
+        //     $fname = $_GET['fname'];
+        // } else {
+        //     $fname = null;
+        // }
+
+        //$fname = isset($_GET['fname']) ? $_GET['fname'] : null;
+
+        $fname = $_POST['fname'] ?? null;
+        include 'views/form.php';
+    }
+
+    public function answer(){
+        echo $_POST['fname'];
+    }
 }

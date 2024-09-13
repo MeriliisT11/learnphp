@@ -3,7 +3,7 @@
         <a class="nav-item nav-link link-body-emphasis active" href="/">World</a>
         <a class="nav-item nav-link link-body-emphasis" href="/us">U.S.</a>
         <a class="nav-item nav-link link-body-emphasis" href="/tech">Technology</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Art</a>
+        <a class="nav-item nav-link link-body-emphasis" href="/form">Form</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Business</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Politics</a>
